@@ -17,7 +17,6 @@ status-website:
   favicon: https://kupe.cloud/favicon.ico
   name: Kupe Status
   theme: dark
-  themeUrl: https://status.kupe.cloud/kupe-theme.css
   introTitle: "**Kupe Status** — real-time monitoring of Kupe services."
   introMessage: This page shows the current status of Kupe's public services. If you're experiencing issues, check here for updates. Incidents are tracked via [GitHub Issues](https://github.com/kupecloud/status/issues).
   navbar:
@@ -26,9 +25,121 @@ status-website:
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
   css: |
-    .status,
-    .tag,
-    .badge {
+    :root {
+      --body-background-color: #08111f;
+      --body-text-color: #e7e9f7;
+      --card-background-color: rgba(17, 26, 46, 0.9);
+      --card-border-color: rgba(167, 173, 201, 0.18);
+      --nav-background-color: #1a1333;
+      --nav-border-bottom-color: rgba(139, 92, 246, 0.2);
+      --nav-current-border-bottom-color: #8b5cf6;
+      --card-button-background-color: #6d1ef5;
+      --card-button-border-color: #6d1ef5;
+      --card-button-text-color: #fbfaff;
+      --card-button-background-color-hover: #8b5cf6;
+      --card-button-border-color-hover: #8b5cf6;
+      --card-button-text-color-hover: #ffffff;
+      --down-border-left-color: #f16f6f;
+      --down-background-color: rgba(241, 111, 111, 0.12);
+      --degraded-border-left-color: #f3b562;
+      --up-border-left-color: #4bbf8a;
+      --tag-color: #f3efff;
+      --tag-up-background-color: rgba(75, 191, 138, 0.18);
+      --tag-down-background-color: rgba(241, 111, 111, 0.16);
+      --tag-degraded-background-color: rgba(243, 181, 98, 0.16);
+      --change-background-color: rgba(109, 30, 245, 0.12);
+      --error-button-border-color: rgba(241, 111, 111, 0.45);
+      --error-button-background-color: rgba(241, 111, 111, 0.14);
+      --error-button-color: #ffc0c0;
+      --submit-button-background-color: #6d1ef5;
+      --submit-button-border-color: #6d1ef5;
+      --submit-button-color: #fbfaff;
+      --graph-opacity: 0.85;
+      --graph-filter: saturate(0.92) brightness(0.9);
+      --code-color: #e7e9f7;
+      --code-background-color: rgba(17, 26, 46, 0.9);
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top, rgba(109, 30, 245, 0.18), transparent 32%),
+        radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.1), transparent 28%),
+        linear-gradient(180deg, #070d18 0%, #08111f 48%, #11152b 100%);
+      color: var(--body-text-color);
+    }
+
+    a {
+      color: #bba2ff;
+    }
+
+    a:hover {
+      color: #d1c0ff;
+    }
+
+    nav {
+      background: linear-gradient(135deg, #1a1333 0%, #31205c 100%) !important;
+      box-shadow: 0 12px 32px rgba(3, 10, 20, 0.35);
+    }
+
+    nav a,
+    nav div {
+      color: #f4f1ff !important;
+    }
+
+    [aria-current] {
+      border-bottom-color: #8b5cf6 !important;
+    }
+
+    main > header {
+      background: linear-gradient(160deg, #1a1333 0%, #31205c 58%, #432b79 100%);
+      border: 1px solid rgba(139, 92, 246, 0.18);
+      border-radius: 1rem;
+      box-shadow: 0 18px 40px rgba(4, 13, 24, 0.22);
+      color: #f6f2ff;
+      margin-top: 1.5rem;
+      padding: 1.5rem 1.75rem;
+    }
+
+    main > header a,
+    main > header p,
+    main > header strong,
+    main > header h1 {
+      color: inherit !important;
+    }
+
+    .lead,
+    h3,
+    small {
+      color: #a7adc9 !important;
+    }
+
+    article {
+      background: rgba(17, 26, 46, 0.9);
+      border-color: rgba(167, 173, 201, 0.18);
+      box-shadow: 0 18px 40px rgba(4, 13, 24, 0.22);
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 0.33rem 0.65rem;
+    }
+
+    .tag.closed,
+    .tag.up {
+      color: #8be0b6;
+    }
+
+    .tag.open,
+    .tag.down {
+      color: #ffc0c0;
+    }
+
+    .tag.degraded {
+      color: #ffd493;
+    }
+
+    .submit-button,
+    a.error-button {
       border-radius: 999px;
     }
 
