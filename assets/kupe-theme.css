@@ -1,0 +1,94 @@
+:root {
+  --body-background-color: #071a2f;
+  --body-text-color: #dbe7f5;
+  --card-background-color: rgba(13, 39, 68, 0.9);
+  --card-border-color: rgba(159, 179, 200, 0.18);
+  --nav-background-color: #0c2746;
+  --nav-border-bottom-color: rgba(124, 184, 255, 0.16);
+  --nav-current-border-bottom-color: #7cb8ff;
+  --card-button-background-color: #2f6fb3;
+  --card-button-border-color: #2f6fb3;
+  --card-button-text-color: #f8fbff;
+  --card-button-background-color-hover: #3d82cc;
+  --card-button-border-color-hover: #3d82cc;
+  --card-button-text-color-hover: #ffffff;
+  --down-border-left-color: #f16f6f;
+  --down-background-color: rgba(241, 111, 111, 0.12);
+  --degraded-border-left-color: #f3b562;
+  --up-border-left-color: #4bbf8a;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(61, 130, 204, 0.16), transparent 30%),
+    linear-gradient(180deg, #061426 0%, #071a2f 45%, #0a2340 100%);
+  color: var(--body-text-color);
+}
+
+a {
+  color: #7cb8ff;
+}
+
+a:hover {
+  color: #afd4ff;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #0a1f38 0%, #12345a 100%);
+  box-shadow: 0 12px 32px rgba(3, 10, 20, 0.35);
+}
+
+.navbar a,
+.navbar-item,
+.navbar strong,
+.navbar .title {
+  color: #eef6ff !important;
+}
+
+.hero,
+.hero.is-primary,
+.hero-body {
+  background: linear-gradient(160deg, #0b2340 0%, #143a62 55%, #1a4977 100%) !important;
+  color: #f3f8ff !important;
+}
+
+.hero a,
+.hero strong,
+.hero .title,
+.hero .subtitle {
+  color: #f3f8ff !important;
+}
+
+.description,
+.markdown-body,
+.markdown-body p,
+.has-text-grey,
+.has-text-grey-dark,
+small {
+  color: #9fb3c8 !important;
+}
+
+.box,
+.card {
+  background-color: rgba(13, 39, 68, 0.9);
+  border: 1px solid rgba(159, 179, 200, 0.18);
+  box-shadow: 0 18px 40px rgba(4, 13, 24, 0.22);
+}
+
+.badge-success,
+.tag.is-success {
+  background-color: rgba(75, 191, 138, 0.18);
+  color: #8be0b6;
+}
+
+.badge-danger,
+.tag.is-danger {
+  background-color: rgba(241, 111, 111, 0.16);
+  color: #ffc0c0;
+}
+
+.badge-warning,
+.tag.is-warning {
+  background-color: rgba(243, 181, 98, 0.16);
+  color: #ffd493;
+}

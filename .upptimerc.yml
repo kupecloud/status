@@ -17,6 +17,7 @@ status-website:
   favicon: https://kupe.cloud/favicon.ico
   name: Kupe Status
   theme: dark
+  themeUrl: https://status.kupe.cloud/kupe-theme.css
   introTitle: "**Kupe Status** — real-time monitoring of Kupe services."
   introMessage: This page shows the current status of Kupe's public services. If you're experiencing issues, check here for updates. Incidents are tracked via [GitHub Issues](https://github.com/kupecloud/status/issues).
   navbar:
@@ -25,46 +26,10 @@ status-website:
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
   css: |
-    :root {
-      --color-text: #e2e8f0;
-      --color-background: #0f172a;
-      --color-accent: #3b82f6;
-      --color-accent-hover: #2563eb;
-      --color-success: #22c55e;
-      --color-error: #ef4444;
-      --color-warning: #f59e0b;
-      --color-link: #60a5fa;
-      --color-link-hover: #93bbfd;
-    }
-    body {
-      background-color: #0f172a;
-      color: #e2e8f0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    }
-    .navbar {
-      background-color: #020617;
-      border-bottom: 1px solid #1e293b;
-    }
-    .btn-primary, .btn.btn-sm {
-      background-color: #3b82f6;
-      border-color: #3b82f6;
-      color: #fff;
-    }
-    .btn-primary:hover, .btn.btn-sm:hover {
-      background-color: #2563eb;
-      border-color: #2563eb;
-    }
-    a {
-      color: #60a5fa;
-    }
-    a:hover {
-      color: #93bbfd;
-    }
-    .badge-success, .tag.is-success {
-      background-color: #22c55e;
-    }
-    .badge-danger, .tag.is-danger {
-      background-color: #ef4444;
+    .status,
+    .tag,
+    .badge {
+      border-radius: 999px;
     }
 
 # See https://upptime.js.org/docs/configuration for more options
