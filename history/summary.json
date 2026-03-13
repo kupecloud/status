@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Website",
+    "url": "https://kupe.cloud",
+    "icon": "https://icons.duckduckgo.com/ip3/kupe.cloud.ico",
+    "slug": "website",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 121,
+    "timeDay": 121,
+    "timeWeek": 121,
+    "timeMonth": 121,
+    "timeYear": 121,
+    "dailyMinutesDown": {}
+  }
+]
