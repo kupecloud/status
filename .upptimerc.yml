@@ -1,4 +1,4 @@
-owner: kupe
+owner: kupecloud
 repo: status
 
 sites:
@@ -18,7 +18,7 @@ status-website:
   name: Kupe Status
   theme: dark
   introTitle: "**Kupe Status** — real-time monitoring of Kupe services."
-  introMessage: This page shows the current status of Kupe's public services. If you're experiencing issues, check here for updates. Incidents are tracked via [GitHub Issues](https://github.com/kupe/status/issues).
+  introMessage: This page shows the current status of Kupe's public services. If you're experiencing issues, check here for updates. Incidents are tracked via [GitHub Issues](https://github.com/kupecloud/status/issues).
   navbar:
     - title: Status
       href: /
@@ -26,45 +26,45 @@ status-website:
       href: https://github.com/$OWNER/$REPO
   css: |
     :root {
-      --color-text: #f5f5f5;
-      --color-background: #1a1a2e;
-      --color-accent: #0eb9ab;
-      --color-accent-hover: #078980;
-      --color-success: #0eb9ab;
-      --color-error: #e74c3c;
-      --color-warning: #f39c12;
-      --color-link: #0eb9ab;
-      --color-link-hover: #078980;
+      --color-text: #e2e8f0;
+      --color-background: #0f172a;
+      --color-accent: #3b82f6;
+      --color-accent-hover: #2563eb;
+      --color-success: #22c55e;
+      --color-error: #ef4444;
+      --color-warning: #f59e0b;
+      --color-link: #60a5fa;
+      --color-link-hover: #93bbfd;
     }
     body {
-      background-color: #1a1a2e;
-      color: #f5f5f5;
+      background-color: #0f172a;
+      color: #e2e8f0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
     .navbar {
-      background-color: #12121f;
-      border-bottom: 1px solid #2a2a4a;
+      background-color: #020617;
+      border-bottom: 1px solid #1e293b;
     }
     .btn-primary, .btn.btn-sm {
-      background-color: #0eb9ab;
-      border-color: #0eb9ab;
+      background-color: #3b82f6;
+      border-color: #3b82f6;
       color: #fff;
     }
     .btn-primary:hover, .btn.btn-sm:hover {
-      background-color: #078980;
-      border-color: #078980;
+      background-color: #2563eb;
+      border-color: #2563eb;
     }
     a {
-      color: #0eb9ab;
+      color: #60a5fa;
     }
     a:hover {
-      color: #078980;
+      color: #93bbfd;
     }
     .badge-success, .tag.is-success {
-      background-color: #0eb9ab;
+      background-color: #22c55e;
     }
     .badge-danger, .tag.is-danger {
-      background-color: #e74c3c;
+      background-color: #ef4444;
     }
 
 # See https://upptime.js.org/docs/configuration for more options
