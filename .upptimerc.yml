@@ -216,7 +216,7 @@ status-website:
 
       nav a.logo div::before,
       nav a.logo div::after {
-        font-size: 1.15rem;
+        font-size: 1.28rem;
         letter-spacing: 0.02em;
       }
 
@@ -226,6 +226,25 @@ status-website:
 
       nav ul a {
         font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 465px) {
+      nav ul li:last-child {
+        display: none;
+      }
+
+      nav .container {
+        gap: 0.35rem;
+      }
+
+      nav a.logo {
+        gap: 0.35rem;
+      }
+
+      nav a.logo div::before,
+      nav a.logo div::after {
+        font-size: 1.24rem;
       }
     }
 
