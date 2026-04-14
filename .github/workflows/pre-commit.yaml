@@ -1,0 +1,20 @@
+name: Pre-Commit
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".pre-commit-config.yaml"
+      - ".upptimerc.yml"
+      - ".github/workflows/*.yml"
+      - ".github/workflows/*.yaml"
+      - "README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pre-commit:
+    uses: kupecloud/github-workflows/.github/workflows/pre-commit.yaml@5f8c2a0126ce233053c56c04ca9a4d50f7f879b7
