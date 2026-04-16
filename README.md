@@ -25,13 +25,13 @@ All scheduling is GitHub-Actions driven:
 
 | Workflow | Schedule | Purpose |
 | -------- | -------- | ------- |
-| `uptime.yml`        | every 5 min       | endpoint ping & history update |
-| `response-time.yml` | hourly            | response-time rollup             |
-| `summary.yml`       | hourly            | README status summary            |
-| `graphs.yml`        | daily             | SVG response-time graphs         |
-| `site.yml`          | on push to `main` | publish the Astro status site    |
-| `setup.yml`         | manual            | one-time bootstrap               |
-| `updates.yml`       | weekly            | Upptime version bumps            |
+| `uptime.yml` | every 5 min | endpoint ping & history update |
+| `response-time.yml` | hourly | response-time rollup |
+| `summary.yml` | hourly | README status summary |
+| `graphs.yml` | daily | SVG response-time graphs |
+| `site.yml` | on push to `main` | publish the Astro status site |
+| `setup.yml` | manual | one-time bootstrap |
+| `updates.yml` | weekly | Upptime version bumps |
 
 ## Related
 
