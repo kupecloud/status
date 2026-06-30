@@ -5,14 +5,35 @@ i18n:
   footer: ""
 
 sites:
-  # - name: Console
-  #   url: https://console.kupe.cloud
-  # - name: Auth
-  #   url: https://auth.kupe.cloud
-  # - name: Grafana
-  #   url: https://grafana.kupe.cloud
-  - name: Website
+  # Group via the "Group | Site" name convention so the status page renders
+  # "Marketing" and "Platform" headers. See https://upptime.js.org/docs/configuration
+  - name: Marketing | Website
     url: https://kupe.cloud
+  # Customer-facing platform services. These advertise "Kupe's public services"
+  # (introMessage) so they must be monitored, not just the marketing site (S-2).
+  - name: Platform | Console
+    url: https://console.kupe.cloud
+    # Headlamp console: the root redirects unauthenticated users to OIDC login.
+    # No unauthenticated health path is exposed, so treat a reachable app
+    # (200 or a normal login redirect) as up.
+    expectedStatusCodes:
+      - 200
+      - 301
+      - 302
+      - 303
+      - 307
+      - 308
+  - name: Platform | Auth
+    url: https://auth.kupe.cloud/-/health/live/
+    # Authentik's unauthenticated liveness endpoint returns 204 No Content.
+    expectedStatusCodes:
+      - 200
+      - 204
+  - name: Platform | Grafana
+    url: https://grafana.kupe.cloud/api/health
+    # Grafana's unauthenticated health endpoint returns 200 with a small JSON body.
+    expectedStatusCodes:
+      - 200
 
 status-website:
   cname: status.kupe.cloud
