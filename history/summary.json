@@ -1,20 +1,80 @@
 [
   {
-    "name": "Website",
+    "name": "Marketing | Website",
     "url": "https://kupe.cloud",
     "icon": "https://icons.duckduckgo.com/ip3/kupe.cloud.ico",
-    "slug": "website",
+    "slug": "marketing-website",
     "status": "up",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 160,
-    "timeDay": 107,
-    "timeWeek": 144,
-    "timeMonth": 159,
-    "timeYear": 160,
+    "time": 88,
+    "timeDay": 88,
+    "timeWeek": 88,
+    "timeMonth": 88,
+    "timeYear": 88,
     "dailyMinutesDown": {}
+  },
+  {
+    "name": "Platform | Console",
+    "url": "https://console.kupe.cloud",
+    "icon": "https://icons.duckduckgo.com/ip3/console.kupe.cloud.ico",
+    "slug": "platform-console",
+    "status": "down",
+    "uptime": "28.51%",
+    "uptimeDay": "28.51%",
+    "uptimeWeek": "28.51%",
+    "uptimeMonth": "28.51%",
+    "uptimeYear": "28.51%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {
+      "2026-07-03": 1
+    }
+  },
+  {
+    "name": "Platform | Auth",
+    "url": "https://auth.kupe.cloud/-/health/live/",
+    "icon": "https://icons.duckduckgo.com/ip3/auth.kupe.cloud.ico",
+    "slug": "platform-auth",
+    "status": "down",
+    "uptime": "44.41%",
+    "uptimeDay": "44.41%",
+    "uptimeWeek": "44.41%",
+    "uptimeMonth": "44.41%",
+    "uptimeYear": "44.41%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {
+      "2026-07-03": 0
+    }
+  },
+  {
+    "name": "Platform | Grafana",
+    "url": "https://grafana.kupe.cloud/api/health",
+    "icon": "https://icons.duckduckgo.com/ip3/grafana.kupe.cloud.ico",
+    "slug": "platform-grafana",
+    "status": "down",
+    "uptime": "80.75%",
+    "uptimeDay": "80.75%",
+    "uptimeWeek": "80.75%",
+    "uptimeMonth": "80.75%",
+    "uptimeYear": "80.75%",
+    "time": 0,
+    "timeDay": 0,
+    "timeWeek": 0,
+    "timeMonth": 0,
+    "timeYear": 0,
+    "dailyMinutesDown": {
+      "2026-07-03": 0
+    }
   }
 ]
