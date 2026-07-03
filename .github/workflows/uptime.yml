@@ -23,6 +23,11 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  # issues: write lets upptime open/close incident issues and call
+  # issues.listForRepo (maintenance events) with the default GITHUB_TOKEN.
+  # The complete fix (Setup CI template push, assignees) still needs a
+  # fine-grained GH_PAT secret — see docs/incident-issues.md operator note.
+  issues: write
 jobs:
   release:
     name: Check status
@@ -34,7 +39,7 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Check endpoint status
-        uses: upptime/uptime-monitor@e620a0d7a97526a295bbe3970495bff6495bdf27 # v1.41.0
+        uses: upptime/uptime-monitor@84b1dd9346adc6e6a02bdddf0e3bfc7274013ece # v1.43.7
         with:
           command: "update"
         env:

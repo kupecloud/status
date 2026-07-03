@@ -23,6 +23,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  # issues.listForRepo (maintenance events) is called on every run; without
+  # issues: write the default GITHUB_TOKEN 403s and aborts before checks run.
+  issues: write
 jobs:
   release:
     name: Check status
@@ -34,7 +37,7 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Update response time
-        uses: upptime/uptime-monitor@e620a0d7a97526a295bbe3970495bff6495bdf27 # v1.41.0
+        uses: upptime/uptime-monitor@84b1dd9346adc6e6a02bdddf0e3bfc7274013ece # v1.43.7
         with:
           command: "response-time"
         env:

@@ -24,6 +24,14 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  # issues: write for incident-issue management + issues.listForRepo;
+  # actions: write for the benc-uk/workflow-dispatch step that kicks the
+  # other upptime workflows. NOTE: Setup CI also regenerates and pushes
+  # .github/workflows/* files, which GITHUB_TOKEN can NEVER push (workflow
+  # scope). That step still requires a fine-grained GH_PAT secret — the
+  # PAT is the only complete fix (see docs/incident-issues.md).
+  issues: write
+  actions: write
 jobs:
   release:
     name: Setup Upptime
@@ -35,20 +43,20 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Update template
-        uses: upptime/uptime-monitor@e620a0d7a97526a295bbe3970495bff6495bdf27 # v1.41.0
+        uses: upptime/uptime-monitor@84b1dd9346adc6e6a02bdddf0e3bfc7274013ece # v1.43.7
         with:
           command: "update-template"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
       - name: Update response time
-        uses: upptime/uptime-monitor@e620a0d7a97526a295bbe3970495bff6495bdf27 # v1.41.0
+        uses: upptime/uptime-monitor@84b1dd9346adc6e6a02bdddf0e3bfc7274013ece # v1.43.7
         with:
           command: "response-time"
         env:
           GH_PAT: ${{ secrets.GH_PAT || github.token }}
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
       - name: Update summary in README
-        uses: upptime/uptime-monitor@e620a0d7a97526a295bbe3970495bff6495bdf27 # v1.41.0
+        uses: upptime/uptime-monitor@84b1dd9346adc6e6a02bdddf0e3bfc7274013ece # v1.43.7
         with:
           command: "readme"
         env:
@@ -59,7 +67,7 @@ jobs:
           workflow: Graphs CI
           token: ${{ secrets.GH_PAT || github.token }}
       - name: Generate site
-        uses: upptime/uptime-monitor@e620a0d7a97526a295bbe3970495bff6495bdf27 # v1.41.0
+        uses: upptime/uptime-monitor@84b1dd9346adc6e6a02bdddf0e3bfc7274013ece # v1.43.7
         with:
           command: "site"
         env:
