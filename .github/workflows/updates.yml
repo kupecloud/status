@@ -15,9 +15,13 @@
 
 
 name: Updates CI
+# NOTE (kupe, review LOW-1): `upptime/updates` is now an upstream no-op stub
+# (it only validates a token and logs "OK"), so this workflow performs no
+# version bumps. The daily `schedule:` trigger was removed so it no longer
+# runs a misleading green no-op. Upptime version bumps are done manually via
+# the Update Template CI workflow (update-template.yml). Retained because
+# Upptime regenerates it on template updates.
 on:
-  schedule:
-    - cron: "0 3 * * *"
   repository_dispatch:
     types: [updates]
   workflow_dispatch:

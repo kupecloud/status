@@ -5,9 +5,9 @@ Status page for [kupe.cloud](https://kupe.cloud), powered by
 
 <!-- toc -->
 
-- [Overview](#overview)
-- [Workflows](#workflows)
-- [Related](#related)
+* [Overview](#overview)
+* [Workflows](#workflows)
+* [Related](#related)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
@@ -38,7 +38,10 @@ All workflows also support `repository_dispatch` and manual
 | `graphs.yml`        | daily                       | SVG response-time graphs       |
 | `site.yml`          | daily / dispatch            | publish the static status site |
 | `setup.yml`         | on push to `.upptimerc.yml` | one-time bootstrap             |
-| `updates.yml`       | daily                       | Upptime version bumps          |
+| `updates.yml`       | dispatch only               | no-op stub; bumps are manual   |
+
+Note: `upptime/updates` is now an upstream no-op, so `updates.yml` does
+nothing; version bumps are done manually via `update-template.yml`.
 
 ## Related
 
