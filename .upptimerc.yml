@@ -14,15 +14,11 @@ sites:
   - name: Platform | Console
     url: https://console.kupe.cloud
     # Headlamp console: the root redirects unauthenticated users to OIDC login.
-    # No unauthenticated health path is exposed, so treat a reachable app
-    # (200 or a normal login redirect) as up.
+    # upptime follows redirects (curl FOLLOWLOCATION, up to 3 hops) and records
+    # only the final status, so a 3xx is never the observed code. Assert 200 on
+    # the landed page — this proves the SPA shell is served, not backend/OIDC.
     expectedStatusCodes:
       - 200
-      - 301
-      - 302
-      - 303
-      - 307
-      - 308
   - name: Platform | Auth
     url: https://auth.kupe.cloud/-/health/live/
     # Authentik's unauthenticated liveness endpoint returns 204 No Content.
