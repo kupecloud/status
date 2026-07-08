@@ -1,6 +1,13 @@
 owner: kupecloud
 repo: status
 
+# Allowlist of secrets exposed to the generated workflows' SECRETS_CONTEXT
+# (upptime v1.43+, PR #292). Without this the workflows serialize
+# toJson(secrets), handing every repo/org secret to the third-party action.
+# Names must be uppercase and must not start with GITHUB_ (review LOW-3).
+secrets:
+  - GH_PAT
+
 i18n:
   footer: ""
 
