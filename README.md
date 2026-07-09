@@ -5,9 +5,9 @@ Status page for [kupe.cloud](https://kupe.cloud), powered by
 
 <!-- toc -->
 
-* [Overview](#overview)
-* [Workflows](#workflows)
-* [Related](#related)
+- [Overview](#overview)
+- [Workflows](#workflows)
+- [Related](#related)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
