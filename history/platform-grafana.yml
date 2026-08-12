@@ -1,7 +1,7 @@
 url: https://grafana.kupe.cloud/api/health
-status: up
-code: 200
-responseTime: 413
-lastUpdated: 2026-08-11T23:49:16.290Z
+status: down
+code: 404
+responseTime: 473
+lastUpdated: 2026-08-12T07:09:10.227Z
 startTime: 2026-07-03T13:14:49.474Z
 generator: Upptime <https://github.com/upptime/upptime>
