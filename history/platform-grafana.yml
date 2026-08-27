@@ -1,7 +1,7 @@
 url: https://grafana.kupe.cloud/api/health
 status: down
 code: 503
-responseTime: 455
-lastUpdated: 2026-08-27T03:17:24.345Z
+responseTime: 383
+lastUpdated: 2026-08-27T04:27:06.744Z
 startTime: 2026-07-03T13:14:49.474Z
 generator: Upptime <https://github.com/upptime/upptime>
