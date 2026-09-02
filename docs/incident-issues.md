@@ -1,4 +1,9 @@
-# Incident issues & the `GH_PAT` requirement
+---
+title: "Status page incident issues"
+description: "Why the Upptime status page needs a GH_PAT to open and close incident issues and regenerate its workflows, and how to provision it."
+owner: sre
+lastReviewed: 2026-09-02
+---
 
 The Upptime workflows in this repo open and close **incident issues** on status
 changes and regenerate the generated `.github/workflows/*` from `.upptimerc.yml`.
