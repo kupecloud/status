@@ -37,6 +37,41 @@ sites:
     # Grafana's unauthenticated health endpoint returns 200 with a small JSON body.
     expectedStatusCodes:
       - 200
+  - name: Platform | Argo CD
+    url: https://argocd.kupe.cloud/healthz
+    # Tenant-facing, not staff-only: the console's app switcher lists Argo CD
+    # next to Grafana (console AppSwitcher.tsx, fed from platformConfig
+    # argocdURL) and the Authentik portal links it too. Its outage is also
+    # customer-visible even for tenants who never open the UI — Argo is what
+    # reconciles their Git against their clusters, so deployments silently stop
+    # converging. Monitored separately from Grafana so the status page
+    # distinguishes "dashboards are down" from "deployments are not shipping".
+    # /healthz is unauthenticated and returns a bare "ok" body.
+    expectedStatusCodes:
+      - 200
+  - name: Platform | API
+    url: https://api.kupe.cloud/readyz
+    # The control plane behind the kupe CLI and the Terraform provider. This was
+    # the most serious monitoring gap: an API outage takes every tenant's
+    # tooling offline while the status page stayed green. /readyz over /healthz
+    # deliberately — readiness is the signal that matters to a caller.
+    expectedStatusCodes:
+      - 200
+  - name: Platform | Signup
+    url: https://signup.kupe.cloud/readyz
+    # If signup breaks nobody can join and there is no other signal that it has.
+    # /readyz checks the dependencies that actually make signup work — it
+    # returns {"checks":{"authentik":"ok","kubernetes":"ok"}} — so it fails when
+    # signup is genuinely unusable, not merely when the process has died.
+    expectedStatusCodes:
+      - 200
+  - name: Platform | Docs
+    url: https://docs.kupe.cloud
+    # Cheap to watch and genuinely customer-facing: docs are where a stuck user
+    # goes first, and this site has its own deploy path (Cloudflare Pages) that
+    # can fail independently of the platform.
+    expectedStatusCodes:
+      - 200
 
 status-website:
   cname: status.kupe.cloud
