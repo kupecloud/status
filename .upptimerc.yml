@@ -12,13 +12,12 @@ i18n:
   footer: ""
 
 sites:
-  # Group via the "Group | Site" name convention so the status page renders
-  # "Marketing" and "Platform" headers. See https://upptime.js.org/docs/configuration
-  - name: Marketing | Website
+  # Flat list, no "Group | Site" prefixes: every entry is a Kupe service, so a
+  # group header adds nothing. kupe.cloud stays monitored because it serves
+  # /signup and /alpha, not because it is the marketing site (S-2).
+  - name: Website
     url: https://kupe.cloud
-  # Customer-facing platform services. These advertise "Kupe's public services"
-  # (introMessage) so they must be monitored, not just the marketing site (S-2).
-  - name: Platform | Console
+  - name: Console
     url: https://console.kupe.cloud
     # Headlamp console: the root redirects unauthenticated users to OIDC login.
     # upptime follows redirects (curl FOLLOWLOCATION, up to 3 hops) and records
@@ -26,18 +25,18 @@ sites:
     # the landed page — this proves the SPA shell is served, not backend/OIDC.
     expectedStatusCodes:
       - 200
-  - name: Platform | Auth
+  - name: Auth
     url: https://auth.kupe.cloud/-/health/live/
     # Authentik's unauthenticated liveness endpoint returns 204 No Content.
     expectedStatusCodes:
       - 200
       - 204
-  - name: Platform | Grafana
+  - name: Grafana
     url: https://grafana.kupe.cloud/api/health
     # Grafana's unauthenticated health endpoint returns 200 with a small JSON body.
     expectedStatusCodes:
       - 200
-  - name: Platform | Argo CD
+  - name: Argo CD
     url: https://argocd.kupe.cloud/healthz
     # Tenant-facing, not staff-only: the console's app switcher lists Argo CD
     # next to Grafana (console AppSwitcher.tsx, fed from platformConfig
@@ -49,7 +48,7 @@ sites:
     # /healthz is unauthenticated and returns a bare "ok" body.
     expectedStatusCodes:
       - 200
-  - name: Platform | API
+  - name: API
     url: https://api.kupe.cloud/readyz
     # The control plane behind the kupe CLI and the Terraform provider. This was
     # the most serious monitoring gap: an API outage takes every tenant's
@@ -57,7 +56,7 @@ sites:
     # deliberately — readiness is the signal that matters to a caller.
     expectedStatusCodes:
       - 200
-  - name: Platform | Signup
+  - name: Signup
     url: https://signup.kupe.cloud/readyz
     # If signup breaks nobody can join and there is no other signal that it has.
     # /readyz checks the dependencies that actually make signup work — it
@@ -65,7 +64,7 @@ sites:
     # signup is genuinely unusable, not merely when the process has died.
     expectedStatusCodes:
       - 200
-  - name: Platform | Docs
+  - name: Docs
     url: https://docs.kupe.cloud
     # Cheap to watch and genuinely customer-facing: docs are where a stuck user
     # goes first, and this site has its own deploy path (Cloudflare Pages) that
