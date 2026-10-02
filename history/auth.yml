@@ -1,7 +1,7 @@
 url: https://auth.kupe.cloud/-/health/live/
-status: down
-code: 503
-responseTime: 376
-lastUpdated: 2026-10-02T02:05:31.234Z
+status: up
+code: 200
+responseTime: 461
+lastUpdated: 2026-10-02T07:31:02.965Z
 startTime: 2026-09-10T18:41:55.742Z
 generator: Upptime <https://github.com/upptime/upptime>
