@@ -1,7 +1,7 @@
 url: https://argocd.kupe.cloud/healthz
 status: up
 code: 200
-responseTime: 544
-lastUpdated: 2026-10-17T01:11:59.162Z
+responseTime: 449
+lastUpdated: 2026-10-18T00:46:49.825Z
 startTime: 2026-09-10T18:41:57.616Z
 generator: Upptime <https://github.com/upptime/upptime>
