@@ -17,4 +17,4 @@ permissions:
 
 jobs:
   pre-commit:
-    uses: kupecloud/github-workflows/.github/workflows/pre-commit.yaml@75f2bc349709d9fec6630dbd937301d1a32708e0 # v1.1.0
+    uses: kupecloud/github-workflows/.github/workflows/pre-commit.yaml@b25db2fd2e7b3944d95f905a9b3534ee7df535b0 # v2.8.0
