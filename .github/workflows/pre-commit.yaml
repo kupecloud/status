@@ -18,11 +18,11 @@ permissions:
 
 jobs:
   pre-commit:
-    uses: kupecloud/github-workflows/.github/workflows/pre-commit.yaml@75f2bc349709d9fec6630dbd937301d1a32708e0 # v1.1.0
+    uses: kupecloud/github-workflows/.github/workflows/pre-commit.yaml@b25db2fd2e7b3944d95f905a9b3534ee7df535b0 # v2.8.0
 
   deployment-guards:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Verify production publishing is restricted to main
         run: python3 -m unittest discover -s tests -v
