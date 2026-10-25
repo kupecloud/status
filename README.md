@@ -67,3 +67,6 @@ no longer runs Upptime's push-capable template generator: that generator rewrite
 and pushes the workflow files, removing branch guards. Local workflow files are
 maintained through reviewed PRs. Setup and asset publishing share one deployment
 queue; the policy is checked by `python3 -m unittest discover -s tests -v`.
+
+Upptime generates `history/summary.json` as compact JSON. It remains covered by
+JSON validation; only the authored-text final-newline rule excludes this file.
