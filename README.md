@@ -5,9 +5,10 @@ Status page for [kupe.cloud](https://kupe.cloud), powered by
 
 <!-- toc -->
 
-- [Overview](#overview)
-- [Workflows](#workflows)
-- [Related](#related)
+* [Overview](#overview)
+* [Workflows](#workflows)
+* [Related](#related)
+* [Branding](#branding)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
@@ -47,3 +48,15 @@ nothing; version bumps are done manually via `update-template.yml`.
 
 - [cloudflare](../cloudflare) — domain routing for `status.kupe.cloud`
 - [docs-public](../docs-public) — public docs site hosted alongside
+
+## Branding
+
+The status site shares the canonical geometric K and lowercase kupe. wordmark
+with the Kupe site, documentation, console and portal. Editable sources and
+rendered assets live in `assets/brand/`. The configured logo and favicon use
+new paths under `/brand/` to avoid cached legacy assets during the cutover;
+the legacy PNG paths remain available. Dark surfaces use near-black and navy,
+with mint actions and readable ink text in both normal and hover states.
+Typography uses local Arial/Helvetica/system fonts. Branding is configured in
+`.upptimerc.yml`; monitoring endpoints, schedules and incident history are
+independent of the visual configuration.
