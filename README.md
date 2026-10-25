@@ -42,7 +42,8 @@ All workflows also support `repository_dispatch` and manual
 | `updates.yml`       | dispatch only               | no-op stub; bumps are manual   |
 
 Note: `upptime/updates` is now an upstream no-op, so `updates.yml` does
-nothing; version bumps are done manually via `update-template.yml`.
+nothing; template upgrades are prepared on a feature branch and merged through a reviewed PR.
+`update-template.yml` now provides that guidance without mutating the repository.
 
 ## Related
 
@@ -60,3 +61,9 @@ with mint actions and readable ink text in both normal and hover states.
 Typography uses local Arial/Helvetica/system fonts. Branding is configured in
 `.upptimerc.yml`; monitoring endpoints, schedules and incident history are
 independent of the visual configuration.
+
+Production publishing is restricted to main, including manual dispatches. Setup
+no longer runs Upptime's push-capable template generator: that generator rewrites
+and pushes the workflow files, removing branch guards. Local workflow files are
+maintained through reviewed PRs. Setup and asset publishing share one deployment
+queue; the policy is checked by `python3 -m unittest discover -s tests -v`.
