@@ -13,7 +13,7 @@
     "time": 166,
     "timeDay": 0,
     "timeWeek": 157,
-    "timeMonth": 192,
+    "timeMonth": 193,
     "timeYear": 166,
     "dailyMinutesDown": {}
   },
@@ -31,7 +31,7 @@
     "time": 535,
     "timeDay": 0,
     "timeWeek": 427,
-    "timeMonth": 539,
+    "timeMonth": 544,
     "timeYear": 535,
     "dailyMinutesDown": {}
   },
@@ -41,15 +41,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/auth.kupe.cloud.ico",
     "slug": "auth",
     "status": "up",
-    "uptime": "99.51%",
+    "uptime": "99.52%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.26%",
-    "uptimeYear": "99.51%",
+    "uptimeYear": "99.52%",
     "time": 578,
     "timeDay": 0,
     "timeWeek": 520,
-    "timeMonth": 575,
+    "timeMonth": 578,
     "timeYear": 578,
     "dailyMinutesDown": {
       "2026-10-02": 326
@@ -61,15 +61,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/grafana.kupe.cloud.ico",
     "slug": "grafana",
     "status": "up",
-    "uptime": "99.51%",
+    "uptime": "99.52%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.26%",
-    "uptimeYear": "99.51%",
+    "uptimeYear": "99.52%",
     "time": 461,
     "timeDay": 0,
     "timeWeek": 395,
-    "timeMonth": 468,
+    "timeMonth": 472,
     "timeYear": 461,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -89,7 +89,7 @@
     "time": 454,
     "timeDay": 0,
     "timeWeek": 391,
-    "timeMonth": 462,
+    "timeMonth": 466,
     "timeYear": 454,
     "dailyMinutesDown": {}
   },
@@ -107,7 +107,7 @@
     "time": 573,
     "timeDay": 0,
     "timeWeek": 373,
-    "timeMonth": 459,
+    "timeMonth": 463,
     "timeYear": 573,
     "dailyMinutesDown": {}
   },
@@ -117,15 +117,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/signup.kupe.cloud.ico",
     "slug": "signup",
     "status": "up",
-    "uptime": "99.51%",
+    "uptime": "99.52%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.26%",
-    "uptimeYear": "99.51%",
+    "uptimeYear": "99.52%",
     "time": 600,
     "timeDay": 0,
     "timeWeek": 687,
-    "timeMonth": 606,
+    "timeMonth": 616,
     "timeYear": 600,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -145,7 +145,7 @@
     "time": 197,
     "timeDay": 0,
     "timeWeek": 171,
-    "timeMonth": 207,
+    "timeMonth": 211,
     "timeYear": 197,
     "dailyMinutesDown": {}
   }
