@@ -25,10 +25,22 @@ repos:
         stages:
           - commit-msg
 
-  - repo: https://github.com/trussworks/pre-commit-hooks
-    rev: f72781be8d6b5e92653232bfb13f3f10cb1fc0c4
+  # Same check as trussworks' markdown-toc hook (markdown-toc 1.2.0, the same
+  # appended comment), but with `-` bullets: the Upptime Summary CI rewrites
+  # README.md with `-` bullets daily, and trussworks hardcodes `*`, so the two
+  # fought and the gate failed on every PR after 28bcc70.
+  - repo: local
     hooks:
       - id: markdown-toc
+        name: Generate a Table of Contents in Markdown files
+        entry: markdown-toc
+        language: node
+        additional_dependencies:
+          - markdown-toc@1.2.0
+        args:
+          - --bullets=-
+          - "--append=\n\n<!-- Regenerate with \"pre-commit run -a markdown-toc\" -->"
+          - -i
         files: ^README\.md$
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
@@ -43,6 +55,18 @@ repos:
       - id: codespell
         args:
           - --write-changes
+
+  # Production publishing (setup.yml, site.yml) must stay restricted to
+  # reviewed main, and the upgrade workflow must stay read-only. This used to be
+  # the separate `deployment-guards` CI job (kupecloud/github-workflows#14).
+  - repo: local
+    hooks:
+      - id: deployment-guards
+        name: deployment guards (publish only from main)
+        entry: python3 -m unittest discover -s tests -v
+        language: system
+        pass_filenames: false
+        files: ^(\.github/workflows/|tests/)
 
   # Refuse any commit whose STAGED content contains a secret. Added org-wide on
   # 2026-10-06 after three OpenTofu state files carrying a dev SSH private key
