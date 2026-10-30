@@ -1,28 +1,59 @@
 name: Pre-Commit
 
+# One PR gate job: `pre-commit run --all-files`, the same hooks an engineer
+# runs locally, including the deployment guards (kupecloud/github-workflows#14).
+# Inlined rather than calling kupecloud/github-workflows: that repository is
+# private, and a public repository cannot call its reusable workflows.
+# Stays on GitHub-hosted runners: this is a public repository and fork PRs
+# run untrusted code.
+
 on:
   pull_request:
     branches:
       - main
     paths:
       - ".pre-commit-config.yaml"
+      - ".markdownlint-cli2.yaml"
       - ".upptimerc.yml"
-      - ".github/workflows/*.yml"
-      - ".github/workflows/*.yaml"
+      - ".github/**"
       - "README.md"
+      - "docs/**"
       - "tests/**"
   workflow_dispatch:
 
 permissions:
   contents: read
 
-jobs:
-  pre-commit:
-    uses: kupecloud/github-workflows/.github/workflows/pre-commit.yaml@75f2bc349709d9fec6630dbd937301d1a32708e0 # v1.1.0
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
-  deployment-guards:
+jobs:
+  gates:
+    name: gates
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
-      - name: Verify production publishing is restricted to main
-        run: python3 -m unittest discover -s tests -v
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python
+        id: python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: "3.13"
+
+      - name: Cache pre-commit environments
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/pre-commit
+          # Hook environments are virtualenvs bound to this exact interpreter.
+          key: pre-commit-${{ runner.os }}-py${{ steps.python.outputs.python-version }}-${{ hashFiles('.pre-commit-config.yaml') }}
+
+      - name: Install pre-commit
+        run: python -m pip install pre-commit==4.2.0
+
+      - name: Run pre-commit
+        env:
+          PRE_COMMIT_COLOR: always
+        run: pre-commit run --all-files --show-diff-on-failure --hook-stage manual
