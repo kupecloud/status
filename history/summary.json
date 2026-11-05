@@ -13,7 +13,7 @@
     "time": 166,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 206,
+    "timeMonth": 204,
     "timeYear": 166,
     "dailyMinutesDown": {}
   },
@@ -31,7 +31,7 @@
     "time": 535,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 549,
+    "timeMonth": 551,
     "timeYear": 535,
     "dailyMinutesDown": {}
   },
@@ -41,15 +41,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/auth.kupe.cloud.ico",
     "slug": "auth",
     "status": "up",
-    "uptime": "99.58%",
+    "uptime": "99.59%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.58%",
+    "uptimeYear": "99.59%",
     "time": 578,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 592,
+    "timeMonth": 595,
     "timeYear": 578,
     "dailyMinutesDown": {
       "2026-10-02": 326
@@ -61,15 +61,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/grafana.kupe.cloud.ico",
     "slug": "grafana",
     "status": "up",
-    "uptime": "99.58%",
+    "uptime": "99.59%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.58%",
+    "uptimeYear": "99.59%",
     "time": 461,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 481,
+    "timeMonth": 482,
     "timeYear": 461,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -107,7 +107,7 @@
     "time": 573,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 464,
+    "timeMonth": 466,
     "timeYear": 573,
     "dailyMinutesDown": {}
   },
@@ -117,15 +117,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/signup.kupe.cloud.ico",
     "slug": "signup",
     "status": "up",
-    "uptime": "99.58%",
+    "uptime": "99.59%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.58%",
+    "uptimeYear": "99.59%",
     "time": 600,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 650,
+    "timeMonth": 659,
     "timeYear": 600,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -145,7 +145,7 @@
     "time": 197,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 221,
+    "timeMonth": 216,
     "timeYear": 197,
     "dailyMinutesDown": {}
   }
