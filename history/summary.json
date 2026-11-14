@@ -13,7 +13,7 @@
     "time": 166,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 220,
+    "timeMonth": 225,
     "timeYear": 166,
     "dailyMinutesDown": {}
   },
@@ -31,7 +31,7 @@
     "time": 535,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 568,
+    "timeMonth": 559,
     "timeYear": 535,
     "dailyMinutesDown": {}
   },
@@ -41,15 +41,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/auth.kupe.cloud.ico",
     "slug": "auth",
     "status": "up",
-    "uptime": "99.64%",
+    "uptime": "99.65%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.64%",
+    "uptimeYear": "99.65%",
     "time": 578,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 607,
+    "timeMonth": 598,
     "timeYear": 578,
     "dailyMinutesDown": {
       "2026-10-02": 326
@@ -61,15 +61,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/grafana.kupe.cloud.ico",
     "slug": "grafana",
     "status": "up",
-    "uptime": "99.64%",
+    "uptime": "99.65%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.64%",
+    "uptimeYear": "99.65%",
     "time": 461,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 477,
+    "timeMonth": 467,
     "timeYear": 461,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -89,7 +89,7 @@
     "time": 454,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 476,
+    "timeMonth": 463,
     "timeYear": 454,
     "dailyMinutesDown": {}
   },
@@ -107,7 +107,7 @@
     "time": 573,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 470,
+    "timeMonth": 459,
     "timeYear": 573,
     "dailyMinutesDown": {}
   },
@@ -117,15 +117,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/signup.kupe.cloud.ico",
     "slug": "signup",
     "status": "up",
-    "uptime": "99.64%",
+    "uptime": "99.65%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.64%",
+    "uptimeYear": "99.65%",
     "time": 600,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 656,
+    "timeMonth": 653,
     "timeYear": 600,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -145,7 +145,7 @@
     "time": 197,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 249,
+    "timeMonth": 259,
     "timeYear": 197,
     "dailyMinutesDown": {}
   }
