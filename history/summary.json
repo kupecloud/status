@@ -13,7 +13,7 @@
     "time": 166,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 205,
+    "timeMonth": 183,
     "timeYear": 166,
     "dailyMinutesDown": {}
   },
@@ -31,7 +31,7 @@
     "time": 535,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 531,
+    "timeMonth": 538,
     "timeYear": 535,
     "dailyMinutesDown": {}
   },
@@ -41,15 +41,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/auth.kupe.cloud.ico",
     "slug": "auth",
     "status": "up",
-    "uptime": "99.66%",
+    "uptime": "99.67%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.66%",
+    "uptimeYear": "99.67%",
     "time": 578,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 591,
+    "timeMonth": 596,
     "timeYear": 578,
     "dailyMinutesDown": {
       "2026-10-02": 326
@@ -69,7 +69,7 @@
     "time": 461,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 450,
+    "timeMonth": 448,
     "timeYear": 461,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -89,7 +89,7 @@
     "time": 454,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 440,
+    "timeMonth": 437,
     "timeYear": 454,
     "dailyMinutesDown": {}
   },
@@ -107,7 +107,7 @@
     "time": 573,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 439,
+    "timeMonth": 435,
     "timeYear": 573,
     "dailyMinutesDown": {}
   },
@@ -125,7 +125,7 @@
     "time": 600,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 606,
+    "timeMonth": 641,
     "timeYear": 600,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -145,7 +145,7 @@
     "time": 197,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 251,
+    "timeMonth": 247,
     "timeYear": 197,
     "dailyMinutesDown": {}
   }
