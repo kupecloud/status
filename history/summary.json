@@ -13,7 +13,7 @@
     "time": 166,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 183,
+    "timeMonth": 187,
     "timeYear": 166,
     "dailyMinutesDown": {}
   },
@@ -31,7 +31,7 @@
     "time": 535,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 538,
+    "timeMonth": 473,
     "timeYear": 535,
     "dailyMinutesDown": {}
   },
@@ -49,7 +49,7 @@
     "time": 578,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 596,
+    "timeMonth": 563,
     "timeYear": 578,
     "dailyMinutesDown": {
       "2026-10-02": 326
@@ -69,7 +69,7 @@
     "time": 461,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 448,
+    "timeMonth": 399,
     "timeYear": 461,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -89,7 +89,7 @@
     "time": 454,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 437,
+    "timeMonth": 397,
     "timeYear": 454,
     "dailyMinutesDown": {}
   },
@@ -107,7 +107,7 @@
     "time": 573,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 435,
+    "timeMonth": 385,
     "timeYear": 573,
     "dailyMinutesDown": {}
   },
@@ -125,7 +125,7 @@
     "time": 600,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 641,
+    "timeMonth": 636,
     "timeYear": 600,
     "dailyMinutesDown": {
       "2026-10-02": 325
@@ -145,7 +145,7 @@
     "time": 197,
     "timeDay": 0,
     "timeWeek": 0,
-    "timeMonth": 247,
+    "timeMonth": 254,
     "timeYear": 197,
     "dailyMinutesDown": {}
   }
